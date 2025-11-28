@@ -1,0 +1,1638 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+.Header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 150px;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.HomePage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HeadSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url(../public/HomeBack2.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+.Logo {
+    color: white;
+    font-size: 40px;
+    transition: 0.5s;
+    font-family: "Orbitron";
+    font-weight: lighter;
+}
+
+.Wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.372);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Lists{
+    display: flex;
+    gap: 40px;
+}
+
+.list{
+    color: rgb(153, 153, 153);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.5s;
+    font-weight: medium; 
+}
+
+.Headparagraph {
+    font-family: "Orbitron";
+    color: rgba(255, 255, 255, 0.748);
+    font-size: 85px;
+    font-weight: lighter;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.Headpart {
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.Title {
+   position: relative;
+   font-family: "Orbitron";
+   color: rgb(198, 198, 198);
+   font-weight: lighter;
+   font-size: 32px;
+   text-decoration: none;
+}
+
+.Title::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   width: 0%;
+   height: 2px;
+   background-color: currentColor;
+   transition: width 0.5s ease;
+}
+
+.Title:hover::after {
+   width: 260px;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.stickyHead{
+    position: fixed;
+
+}
+
+.Sections {
+    width: 100%;
+    background-color: #010104;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Section1 {
+    width: 100%;
+    padding: 0px 150px;
+    margin-bottom: 350px;
+}
+
+.Articles{
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 0px 50px;
+}
+
+.Article {
+    width: 100%;
+    display: flex;
+    gap: 200px;
+    padding: 20px 0px;
+}
+
+.Art-img{
+    width: 40%;
+}
+
+.Art-des {
+    width: 55%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Art-Title{
+    color: rgb(255, 255, 255);
+    font-family: "Orbitron";
+    font-weight: lighter;
+    font-size: 35px;
+}
+
+.Art-paragraph{
+    color: #5EA6CB;
+    font-size: 18px;
+}
+
+.Article-link {
+    color: #436D91;
+    font-weight: medium;
+    margin-top: 10px;
+}
+
+.Article-link:hover {
+    color: #4f82ae;
+}
+
+.Section2 {
+    width: 100%;
+    height: 1000px;
+    background-image: url(../public/Section2Back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 350px;
+    position: relative;
+}
+
+.Section2Title {
+    font-family: "Orbitron";
+    font-weight: lighter;
+    font-size: 95px;
+    color: rgba(255, 255, 255, 0.756);
+    text-align: center;
+}
+
+.Section2Paragraph{
+    color: #68b4da;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: justify; 
+}
+
+.Section2Link {
+    color: #436D91;
+    font-weight: medium;
+    margin-top: 10px;
+}
+
+.Section2Link:hover{
+    color: #4f82ae;
+}
+
+.Section2Description {
+    background-color: #0f0f1657;
+    padding: 20px;
+    border-radius: 10px;
+    width: 420px;
+    border: 2px solid #252525;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    transition: 0.5s;
+    left: 20px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.Section2Description-Title{
+    color: white;
+    font-family: "Orbitron";
+    font-weight: medium;
+}
+
+.Section2Description-Div-T-C {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.Section2DescriptionClose:hover {
+    color: #4f82ae;
+}
+
+.Section2Description-Button {
+    position: absolute;
+    margin-bottom: -800px;
+    width: 170px;
+    left: 20px;
+    color: #68b4da;
+    background-color: transparent;
+    padding: 5px 30px;
+    font-size: 18px;
+    border: 2px solid #68b4da;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.Section2Description-Button:hover {
+    scale: 1.1;
+}
+
+.Section2Description-Button:active {
+    scale: 0.9;
+}
+
+.Section3 {
+    width: 100%;
+    padding: 0px 150px;
+    margin-bottom: 50px;
+    background-image: url(../public/hi2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 180px;
+    margin-top: 150px;
+}
+
+.Section3-Title {
+    font-family: "Orbitron";
+    color: rgba(255, 255, 255, 0.592);
+    position: relative;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 70px;
+}
+
+.Section3-Title::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   width: 0%;
+   height: 2px;
+   background-color: white;
+   transition: width 0.5s ease;
+   text-align: center;
+}
+
+.Section3-Title:hover::after {
+   width: 180px;
+   cursor: pointer;
+}
+
+.Section3-Title:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.Section3-Div-Title {
+    display: flex;
+    justify-content: center;
+}
+
+.Section3-firstContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 250px;
+    padding: 0px 100px;
+}
+
+.Section3-SecondContent{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    padding: 0px 100px;
+    flex-direction: row-reverse;
+}
+
+.Section3-ThirdContent{
+    margin-top: 150px;
+}
+
+.Section3-firstContent-Title,  .Section3-SecondContent-Title, .Section3-ThirdContent-Title{
+   font-family: "Orbitron";
+   text-decoration: underline;
+   color: rgb(198, 198, 198); 
+}
+
+.Section3-firstContent-Paragraph, .Section3-SecondContent-Paragraph{
+    color: #68b4da;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: justify; 
+    max-width: 600px;
+}
+
+.Section3-firstContent-img img{
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.Section3-firstContent-Name {
+    color: white;
+    text-align: right;
+}
+
+.Section3-firstContent-Date {
+    color: rgb(206, 206, 206);
+    text-align: right;
+    margin-top: 5px;
+}
+
+.Section3-SecondContent-img img {
+    width: 500px;
+    margin-top: -50px;
+}
+
+.Section3-ThirdContent-Paragraph {
+    color: #68b4da;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: justify; 
+}
+
+.Section3-part2{
+    margin-top: 180px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 150px;
+    background-image: url(../public/firstStepPart2.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Section3-part2-Title{
+    font-family: "Orbitron";
+    text-decoration: underline;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.section3-part2-description {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 50px;
+    padding: 0px 200px;
+}
+
+.section3-part2-Paragraph {
+    color: #68b4da;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 500px;
+}
+
+.section3-part2-img{
+    display: flex;
+    align-items: center;
+}
+
+.section3-part2-img img{
+    width: 520px;
+    border-radius: 10px;
+    border: 2px solid #68b4da;
+}
+
+.FirstHuman {
+    display: flex;
+    width: 100%;
+    padding: 0px 200px;
+    margin-bottom: 400px;
+}
+
+.FirstHuman-img img{
+    width: 500px;
+    border-bottom: 2px solid white;
+}
+
+.FirstHuman-Name {
+    color: white;
+    font-family: "Orbitron";
+    font-size: 60px;
+}
+
+.FirstHuman-desc {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.FirstHuman-Nickname {
+    color: #68b4da;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.FirstHuman-Paragraph {
+    color: #68b4da;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: justify;  
+}
+
+.FirstStep {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 250px;
+}
+
+.FirstStep-img img{
+    border-radius: 10px;
+    border: 2px solid #5EA6CB ;
+}
+
+.FirstStep-Title {
+    color: rgba(255, 255, 255, 0.714);
+    font-family: "Orbitron";
+    font-size: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.FirstStep-Title::after{
+    content: "";
+    bottom: -4px;
+    color: white;
+    position: absolute;
+    height: 3px;
+    width: 0px;
+    left: 0;
+    background-color: white;
+   transition: width 0.5s ease;
+   text-align: center;
+}
+
+.FirstStep-Title:hover::after {
+    width: 525px;
+}
+
+.FirstStep-Title:hover {
+    color: white;
+}
+
+.FirstStep-Paragraph {
+    color: #75c3eb;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 500px;  
+}
+
+.FirstStep-Desc {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FirstStep-Link {
+    margin-left: 5px;
+    color: #436D91;
+    transition: 0.5s;
+}
+
+.FirstStep-Link:hover {
+    color: #4f82ae;
+}
+
+.Moon3dModelMainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Moon3dModel {
+   position: absolute;
+   display: none;
+   opacity: 0;
+   flex-direction: column;
+   background-color: #010104;
+   border: 2px solid #68b4da;
+   padding: 10px;
+   transition: 0.5s;
+   border-radius: 10px;
+}
+
+.Moon3dModelButton {
+    color: #68b4da;
+    border: 2px solid #68b4da;
+    background-color: transparent;
+    font-size: 50px;
+    font-family: "Orbitron";
+    margin-top: 350px;
+    border-radius: 100px;
+    padding: 10px 20px;
+    cursor: pointer;
+    animation: Moon3dModelAnime 4s infinite ease;
+    transition: 0.5s;
+}
+
+.Moon3dModelButton:hover {
+    color: white;
+    border: 2px solid white;
+}
+
+.Moon3dModelCloseDiv{
+    display: flex;
+    justify-content: right;
+}
+
+.Moon3dModelClose {
+    color: #68b4da;
+    font-family: "Orbitron";
+    font-weight: medium;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: right;
+    transition: 0.5s;
+}
+
+.Moon3dModelClose:hover {
+    color: white;
+}
+
+@keyframes Moon3dModelAnime {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+.section {
+    transition: 0.5s;
+    width: 100%;
+}
+
+.Topics {
+    width: 100%;
+    padding: 0px 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 250px;
+}
+
+.Topics-Title {
+    font-family: "Orbitron";
+    color: white;
+    font-weight: lighter;
+}
+
+.Topics-Container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.Topic {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.Topic-Galaxy{
+    background-image: url(../public/galaxyBack.jpg);   
+}
+
+.Topic-Stars {
+    background-image: url(../public/Stars.jpg);
+}
+
+.Topic-Missions {
+    background-image: url(../public/Missions.webp);
+}
+
+.Topic-Nebules {
+    background-image: url(../public/Nebules.webp);
+}
+
+.Topic::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: #01010438;
+    transition: width 0.5s ease;
+}
+
+.Topic:hover::after{
+    width: 100%;
+}
+
+.Topic:hover{
+    scale: 1.05;
+}
+
+.Topic-Title {
+    position: absolute;
+    color: #ffffff6f;
+    bottom: 10px;
+    left: 10px;
+    font-size: 90px;
+}
+
+.HowEveryThingStart {
+    width: 100%;
+    background-image: url(../public/HETS3.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 350px;
+}
+
+.HowEveryThingStart-Title {
+    color: white;
+    font-family: "Orbitron";
+    font-size: 60px;
+}
+
+.HowEveryThingStart-Wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #00000062;
+    padding: 150px 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.HowEveryThingStart-Paragraph {
+    color: rgb(248, 230, 255);
+    font-size: 18px;
+    margin-top: 30px;
+    max-width: 1000px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 50px;    
+}
+
+.HowEveryThingStart-Link {
+    color: white;
+    border: 2px solid white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.HowEveryThingStart-Link:hover {
+    background-color: white;
+    color: #30194E;
+}
+
+.FirstTimePage {
+    display: flex;
+    flex-direction: column;
+    background-color: #010104;
+}
+
+.JamesWebPics {
+    width: 100%;
+    padding: 0px 150px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 250px;
+}
+
+.JamesWebPics-Title {
+    color: rgb(198, 198, 198);
+    font-family: "Orbitron";
+    position: relative;
+}
+
+.JamesWebPics-Title-Buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.JamesWebPics-Slider-Buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.JamesWebPics-Main {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Slider-Buttons {
+    background-color: transparent;
+    color: #68b4da;
+    border: 2px solid #68b4da;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+.JamesWebPics-Buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0px 50px;
+}
+
+.Slider-left{
+    left: 0;
+}
+
+.Slider-left{
+    right: 0;
+}
+
+.Slider-Buttons:hover {
+    color: #010104;
+    background-color: #68b4da;
+}
+
+.Slider-Buttons:active{
+    background-color: transparent;
+    color: #68b4da;
+}
+
+.JamesWebPics-Content {
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.JamesPic {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.JamesPic-Wrapper{
+    background-color: #01010449;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.JamesPic-Title {
+    font-family: "Orbitron";
+    text-align: left;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.JamesPic-Desc {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.JameWebbLink {
+    color: white;
+    font-family: "Orbitron";
+}
+
+.Footer {
+    width: 100%;
+    height: 250px;
+    background-color: #050c1f;
+    padding: 50px 150px;
+}
+
+.Footer-Logo {
+    color: white;
+    font-family: "Orbitron";
+    font-weight: lighter;
+    text-align: left;
+    font-size: 40px;
+}
+
+.Footer-Content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(153, 153, 153);
+    padding-bottom: 30px;
+}
+
+.Footer-Lists {
+    display: flex;
+    gap: 45px;
+}
+
+.Footer-Lists .list:hover {
+    color: white;
+}
+
+.Footer-Desc {
+    max-width: 500px;
+    color: rgb(153, 153, 153)
+}
+
+.Footer-Copyright-Section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.Footer-Copyright {
+    color: #7fc3e6;
+    font-size: 20px;
+}
+
+.Footer-Icons-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Footer-Icons{
+    color: white;
+    font-size: 35px;
+}
+
+.HetsMainPage {
+    width: 100%;
+    background-color: #010104;
+}
+
+.HetsMainPage-Title {
+    color: rgba(255, 255, 255, 0.728);
+    font-family: "Orbitron";
+    font-weight: lighter;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 150px;
+}
+
+.HetsMainPageContent , .BlackHolePage-Content{
+    padding: 0px 150px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.HetsMainPageContent-title1, .HetsMainPageContent-title5 , .BlackHolePage-Content-Intro-Title{
+    color: white;
+    text-decoration: underline;
+    font-family: "Orbitron";
+    margin-top: 10px;
+}
+
+.HetsMainPageContent-Paragraph1, .HetsMainPageContent-Paragraph5 , .BlackHolePage-Content-Intro-Paragraph{
+    color: #aeaeae;
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.HetsMainPage-Header{
+    background-image: url(../public/HETS3.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.HetsMainPageContent-title2, .HetsMainPageContent-title4, .BlackHolePage-Content-part1-Title, .BlackHolePage-Content-part3-Title{
+    color: white;
+    text-decoration: underline;
+    font-family: "Orbitron";
+    text-align: center;
+    margin-top: 10px;
+}
+
+.HetsMainPageContent-Paragraph2,.HetsMainPageContent-Paragraph4 , .BlackHolePage-Content-part1-Paragraph, .BlackHolePage-Content-part3-Paragraph{
+    color: #aeaeae;
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.HetsMainPageContent-title3 , .BlackHolePage-Content-part2-Title {
+    color: white;
+    text-decoration: underline;
+    font-family: "Orbitron";
+    text-align: right;
+}
+
+.HetsMainPageContent-Paragraph3 , .BlackHolePage-Content-part2-Paragraph{
+    color: #aeaeae;
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.BlackHolePage {
+    width: 100%;
+    background-color: #010104;
+}
+
+.BlackHolePage-Header {
+    background-image: url(../public/BlackHoleBack.avif);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.BlackHolePage-Header-Wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.214);
+}
+
+.BlackHolePage-Title {
+    color: rgba(255, 255, 255, 0.728);
+    font-family: "Orbitron";
+    font-weight: lighter;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 150px;
+}
+
+.GalaxyPages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #010104;
+}
+
+.GalaxyPagesHeader {
+    width: 100%;
+    background-image: url(../public/GalaxyPageBack.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.GalaxyPagesTitle {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "Orbitron";
+    font-weight: lighter;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 150px;
+}
+
+.GalaxyPagesContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 150px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.GalaxyPagesContent-intro-title {
+    color: white;
+    font-family: "Orbitron";
+}
+
+.GalaxyPagesContent-intro-paragraph {
+    color: #5EA6CB;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.GalaxyPagesContent-Galaxies {
+    margin-top: 100px;
+}
+
+.GalaxyPagesContent-Galaxies-title {
+    color: white;
+    font-family: "Orbitron";
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px;
+}
+
+.GalaxyPagesContent-Galaxies-Div {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.GalaxyPagesContent-Galaxies-Cards {
+    width: 350px;
+    height: 480px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: 0.5s;
+}
+
+.GalaxyPagesContent-Galaxies-Cards::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: rgba(0, 0, 0, 0.204);
+    transition: 0.5s;
+}
+
+.GalaxyPagesContent-Galaxies-Cards:hover::after{
+    width: 100%;
+}
+
+.GalaxyPagesContent-Galaxies-Cards:hover {
+    scale: 1.05;
+}
+
+.GalaxyPagesContent-Galaxies-Cards-Title {
+    color: #5ea7cbe2;
+    font-family: "Orbitron";
+    font-size: 33px;
+    margin-left: 20px;
+}
+
+.GalaxyPagesContent-Galaxies-Cards-Link {
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    z-index: 4;
+}
+
+.Galaxy {
+    width: 100%;
+    display: flex;
+    min-height: 1000px;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #010104;
+}
+
+.Galaxy-Content {
+    width: 100%;
+    padding: 100px 150px;
+}
+
+.Galaxy-Content-Title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.Galaxy-Content-h1 {
+    color: white;
+    font-family: "Orbitron";
+    font-size: 50px;
+}
+
+.Galaxy-Content-img {
+    width: 650px;
+    border-radius: 10px;
+}
+
+.Galaxy-Content-paragraph {
+    color: #5EA6CB;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.ErrorPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #010104;
+    padding: 0px 20px;
+}
+
+.ErrorPageTitle {
+    color: white;
+    font-family: "Orbitron";
+    text-align: center;
+}
+
+.ErrorPageParagraph {
+    color: #7e7e7e;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.ErrorPageButton {
+    background-color: #5EA6CB;
+    margin-top: 30px;
+    padding: 10px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1618px) {
+    .Section3, .Section3-part2, .Section3-firstContent, .Section3-SecondContent {
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 1490px) {
+    .Art-img{
+        width: 45%;
+    }
+
+    .section3-part2-description {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1420px){
+    .Galaxy-Content-Title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Galaxy-Content {
+        padding: 100px 50px;
+    }
+}
+
+@media only screen and (max-width: 1390px) {
+    .Topics-Container {
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .Art-des {
+        width: 100%;
+    }
+
+    .Art-img {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1200px)  {
+    .FirstHuman {
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+
+    .FirstHuman-Name {
+        text-align: center;
+    }
+
+    .Section3-firstContent, .Section3-SecondContent {
+        flex-direction: column-reverse;
+    }
+
+    .section3-part2-description {
+        gap: 10px;
+    }
+
+    .Section3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Section3-firstContent-img, .Section3-SecondContent-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .Section3-firstContent-Name, .Section3-firstContent-Date {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 1100px) {
+    .Headparagraph {
+        font-size: 70px;
+    }
+
+    .GalaxyPagesContent {
+        padding: 10px 50px;
+    }
+
+    .Section1, .JamesWebPics, .HowEveryThingStart-Wrapper, .Topics{
+        padding: 150px 50px;
+    }
+    .Footer {
+        padding: 50px;
+    }
+
+    .Header {
+        padding: 0px 50px;
+    }
+
+    .Article {
+        gap: 50px;
+    }
+
+    .section3-part2-description {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .Moon3dModelMainDiv {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 900px){
+    .Headparagraph{
+        font-size: 60px;
+        padding: 0px 50px;
+    }
+
+    .HowEveryThingStart-Title {
+        font-size: 45px;
+    }
+
+    .Moon3dModelButton {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .Headparagraph{
+        font-size: 50px;   
+    }
+
+    .BlackHolePage-Content, .HetsMainPageContent {
+        padding: 0px 50px;
+    }
+
+    .FirstStep-img img{
+        width: 600px;
+    }
+
+    .JamesPic-Desc {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .Galaxy-Content-img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 675px){
+
+    .HowEveryThingStart-Title {
+        font-size: 40px;
+    }
+
+    .HetsMainPage-Title{
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .FirstStep-img img{
+        width: 500px;
+    }
+    .FirstStep {
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 585px){
+
+    .HowEveryThingStart-Title {
+        font-size: 30px;
+    }
+
+    .Section2Title{
+        font-size: 70px;
+    }
+
+    .Footer-Content {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .FirstStep-Title {
+        text-align: center;
+    }
+
+    .Footer {
+        height: auto;
+    }
+
+    .Header {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .Logo {
+        text-align: left;
+    }
+
+    .HetsMainPage-Title{
+        font-size: 50px;
+    }
+
+    .JamesPic-Title {
+        display: none;
+    }
+
+    .JamesWebPics-Content {
+        height: 70vh;
+    }
+
+    .Title, .JamesWebPics-Title {
+        font-size: 25px;
+    }
+
+    .Title:hover::after {
+        width: 210px;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    .Section3-firstContent-img img, .Section3-SecondContent-img img, .FirstHuman-img img {
+        width: 400px;
+    }
+
+    .section3-part2-img img{
+        width: 420px;
+    }
+}   
+
+@media only screen and (max-width: 520px) {
+    .Footer-Copyright-Section {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .FirstStep-Title {
+        font-size: 30px;
+    }
+    
+    .FirstStep-img img {
+        width: 400px;
+    }
+
+    .Art-Title {
+        font-size: 30px;
+    }
+    .Art-paragraph {
+        font-size: 16px;
+    }
+
+    .JamesWebPics-Content {
+        height: 50vh;
+    }
+
+    .JamesWebPics, .Topics {
+        margin-bottom: 100px;
+    }
+
+    .Section2 {
+        height: 700px;
+    }
+
+    .JamesWebPics-Main {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .JamesWebPics-Buttons {
+        position: relative;
+    }
+
+    .Headparagraph {
+        font-size: 35px;
+    }
+
+    .HeadSection {
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .Section2Description {
+        width: 300px;
+    }
+
+    .Galaxy-Content-h1 {
+        font-size: 35px;
+    }
+
+    .Galaxy-Content-paragraph {
+        font-size: 16px;
+    }
+    
+    .Section2Paragraph {
+        font-size: 14px;
+    }
+
+    .HowEveryThingStart-Title {
+        font-size: 25px;
+    }
+
+    .HowEveryThingStart-Paragraph {
+        font-size: 16px;
+    }
+
+    .Section1, .JamesWebPics, .Topics{
+        padding: 100px 10px;
+    }
+
+    .Section3-part2-Title {
+        font-size: 30px;
+    }
+
+    .FirstHuman-Name {
+        font-size: 50px;
+    }
+
+    .Section3-firstContent-img img, .Section3-SecondContent-img img, .FirstHuman-img img {
+        width: 300px;
+    }
+
+    .section3-part2-img img{
+        width: 330px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .HetsMainPage-Title{
+        font-size: 35px;
+    }
+
+    .GalaxyPagesTitle {
+        font-size: 70px;
+    }
+
+    .GalaxyPagesContent-intro-title {
+        font-size: 20px;
+    }
+
+    .Section3-Title {
+        font-size: 55px;
+    }
+
+    .Footer-Logo {
+        font-size: 30px;
+    }
+
+    .Art-paragraph {
+        font-size: 14px;
+    }
+
+    .Footer {
+        padding: 30px;
+    }
+
+    .Footer-Copyright-Section {
+        gap: 30px;
+    }
+
+    .Footer-Lists .list {
+        font-size: 18px;
+    }
+
+    .Footer-Copyright {
+        font-size: 18px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 410px) {
+    .Topic {
+        width: 280px;
+        height: 400px;
+    }
+
+    .Topic-Title {
+        font-size: 60px;
+    }
+
+    .Section2Title {
+        font-size: 50px;
+    }
+
+    .FirstStep-img img{
+        width: 300px;
+    }
+
+    .HowEveryThingStart-Title {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+
+@media only screen and (max-width: 325px) {
+    .HetsMainPageContent-title1, .HetsMainPageContent-title2, .HetsMainPageContent-title3,.HetsMainPageContent-title4,.HetsMainPageContent-title5 {
+        font-size: 18px;
+    }
+
+    .HetsMainPageContent-Paragraph1, .HetsMainPageContent-Paragraph2, .HetsMainPageContent-Paragraph3, .HetsMainPageContent-Paragraph4, .HetsMainPageContent-Paragraph5 {
+        font-size: 16px;
+    }
+}
+
