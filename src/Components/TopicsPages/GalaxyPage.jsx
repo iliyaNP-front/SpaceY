@@ -8,42 +8,42 @@ function GalaxyPages(){
         {
             id: 1,
             Title: "Milky Way",
-            Image: "../public/milkywayback.jpg"
+            Image: "../milkywayback.jpg"
         },
         {
             id: 2,
             Title: "Andromeda",
-            Image: "../public/AndromedaGalaxy.jpg"
+            Image: "../AndromedaGalaxy.jpg"
         },
         {
             id: 3,
             Title: "Triangulum",
-            Image: "../public/TriangulumGalaxy.jpg"
+            Image: "../TriangulumGalaxy.jpg"
         },
         {
             id: 4,
             Title: "Whirlpool",
-            Image: "../public/WhirlpoolGalaxy.jpg"
+            Image: "../WhirlpoolGalaxy.jpg"
         },
         {
             id: 5,
             Title: "Pinwheel",
-            Image: "../public/PinwheelGalaxy.jpg"
+            Image: "../PinwheelGalaxy.jpg"
         },
         {
             id: 6,
             Title: "Cartwheel",
-            Image: "./cartwheel.jpg"
+            Image: "../cartwheel.jpg"
         },
         {
             id: 7,
             Title: "Black Eye",
-            Image: "../public/BlackEyeGalaxy.webp"
+            Image: "../BlackEyeGalaxy.webp"
         },
         {
             id: 8,
             Title: "Cigar Galaxy",
-            Image: "../public/CigarGalaxy.webp"
+            Image: "../CigarGalaxy.webp"
         },
         
     ]
