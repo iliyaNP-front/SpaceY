@@ -33,7 +33,7 @@ function GalaxyPages(){
         {
             id: 6,
             Title: "Cartwheel",
-            Image: "./../public/cartwheel.jpg"
+            Image: "./cartwheel.jpg"
         },
         {
             id: 7,
